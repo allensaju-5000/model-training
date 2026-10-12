@@ -2,3 +2,8 @@ graft/.cache/
 
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
+
+# YOLO models and generated notebook artifacts.
+notebooks/**/*.pt
+notebooks/**/outputs/
+notebooks/**/.ipynb_checkpoints/
