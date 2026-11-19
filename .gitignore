@@ -3,22 +3,11 @@ graft/.cache/
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
 
-# YOLO models and generated notebook artifacts.
-notebooks/**/*.pt
-notebooks/**/outputs/
-notebooks/**/.ipynb_checkpoints/
-
-# Downloaded datasets and model weights (UVH-26, RT-DETRv2).
+# Downloaded datasets.
 /data/
-/weights/rtdetrv2/
 
 # RF-DETR training runs (checkpoints, logs, exports).
 /runs/
-
-# Model weights, exported models, and notebook input data (videos).
-/weights/
-notebooks/**/*.onnx
-notebooks/**/data/
 
 # Claude Code: skills ship inside kiln (kiln/skills/) and are installed here with
 # `kiln skill install`, so the installed copies and local settings stay untracked.
