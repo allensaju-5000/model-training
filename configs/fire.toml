@@ -1,0 +1,20 @@
+# Fire + smoke detection. Run from model-training/:
+#   uv run kiln train run configs/fire.toml
+#   uv run kiln train export configs/fire.toml
+
+backend = "rfdetr"
+model = "nano"                              # nano | small | medium | large
+dataset = "data/FIRE/fire-labelled-coco"
+classes = ["smoke", "fire"]
+output = "runs/rfdetr-nano"                 # keeps the existing run's folder
+project = "fire-detection"
+
+epochs = 50
+batch = 2                                   # effective batch = batch * grad_accum_steps
+lr = 1e-4
+patience = 10
+workers = 4
+mlflow = false
+
+[extra]
+grad_accum_steps = 8
